@@ -1,0 +1,29 @@
+---
+#----- spring -----#
+spring:
+  application:
+    name: bcp-socle-sample-1 # EDIT THIS
+  main:
+    allow-bean-definition-overriding: true
+
+#----- server -----#
+server:
+  port: 8081 # EDIT THIS
+
+#----- authorization -----#
+authorization:
+  public-endpoints: /** # EDIT THIS TO ADD/REMOVE PUBLIC ENDPOINTS EX: /** ,/bcp/socle/agencies/** ,/bcp/socle/pays/**
+
+#----- Keycloak Configuration -----#
+keycloak:
+  realm: BCP-SOCLE-Realm # EDIT THIS
+  auth-server-url: http://localhost:8082/auth # EDIT THIS
+  resource: bcp-socle-sample-1-backend # EDIT THIS
+  bearer-only: true
+
+#----- Info -----#
+info:
+  app:
+    name: bcp-socle-sample-1 # EDIT THIS
+    description: bcp-socle-sample-1 # EDIT THIS
+    version: 1.0.0 # EDIT THIS
